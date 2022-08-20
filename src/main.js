@@ -1,13 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
+import "./assets/main.scss";
 
+const app = createApp(App);
 
-/* add icons to the library */
-
-import './assets/main.scss'
-
-const app = createApp(App)
-
-
-app.mount('#app')
+app.mount("#app");
