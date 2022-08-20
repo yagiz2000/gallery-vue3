@@ -16,7 +16,6 @@ const currentPhotoSrc = computed(
 
 const bindKeyboardFunctionality = (event) => {
   if (event.key === "ArrowRight") {
-    console.log("sa");
     swapRight();
   }
   if (event.key === "ArrowLeft") {
@@ -65,8 +64,9 @@ const changeCurrentPhotoIndex = (newIndex) => {
 
 defineExpose({ openGallery, closeGallery, changeCurrentPhotoIndex });
 </script>
+
 <template>
-  <div v-bind="$attrs" v-show="isGalleryOpen" class="gallery-wrapper">
+  <div v-bind="$attrs" v-if="isGalleryOpen" class="gallery-wrapper">
     <div class="arrow-button" @click="swapLeft" id="leftArrow">
       <svg
         style="fill: white"
