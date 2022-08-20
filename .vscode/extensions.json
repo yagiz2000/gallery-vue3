@@ -1,3 +1,13 @@
 {
-  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+  "recommendations": [
+    "vue.volar",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "Lokalise.i18n-ally",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "Syler.sass-indented",
+    "hollowtree.vue-snippets"
+  ],
+  "unwantedRecommendations": ["octref.vetur"]
 }
