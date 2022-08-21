@@ -14,8 +14,9 @@ const currentPhotoSrc = computed(
   () => props.imgSrcList[currentPhotoIndex.value]
 );
 
-const bindKeyboardFunctionality = (event) => {
+const keyUpEventCallback = (event) => {
   if (event.key === "ArrowRight") {
+    console.log("hey");
     swapRight();
   }
   if (event.key === "ArrowLeft") {
@@ -25,12 +26,11 @@ const bindKeyboardFunctionality = (event) => {
     closeGallery();
   }
 };
-
 watch(isGalleryOpen, (newValue) => {
   if (newValue) {
-    document.addEventListener("keyup", bindKeyboardFunctionality);
+    window.addEventListener("keyup", keyUpEventCallback);
   } else {
-    document.removeEventListener("keyup", bindKeyboardFunctionality);
+    window.removeEventListener("keyup", keyUpEventCallback);
   }
 });
 
@@ -61,8 +61,7 @@ const swapLeft = () => {
 const changeCurrentPhotoIndex = (newIndex) => {
   currentPhotoIndex.value = newIndex;
 };
-
-defineExpose({ openGallery, closeGallery, changeCurrentPhotoIndex });
+defineExpose({ swapRight });
 </script>
 
 <template>
