@@ -1,6 +1,9 @@
 {
-  "name": "gallery-directive-2",
+  "name": "gallery-vue3",
   "version": "0.0.0",
+  "main": "./dist/gallery-vue3.umd.js",
+  "module": "./dist/gallery-vue3.es.js",
+  "author": "Yagiz Ceritoglu <yagzceritoglu@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,16 +11,23 @@
     "test:unit": "vitest --environment jsdom",
     "coverage": "vitest run --coverage"
   },
-  "dependencies": {
-    "sass": "^1.54.0",
-    "vue": "^3.2.37"
+  "peerDependencies": {
+    "vue": "3.x"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.1",
+    "@vitejs/plugin-vue": "^2.3.3",
     "@vue/test-utils": "^2.0.2",
     "c8": "^7.12.0",
     "jsdom": "^20.0.0",
+    "path": "^0.12.7",
+    "sass": "^1.54.8",
     "vite": "^3.0.1",
-    "vitest": "^0.18.1"
+    "vitest": "^0.18.1",
+    "vue": "^3.2.25"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagiz2000/vue3-gallery"
   }
 }
