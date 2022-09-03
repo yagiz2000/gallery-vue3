@@ -1,35 +1,38 @@
-# gallery-directive-2
+# Gallery Vue3
 
-This template should help get you started developing with Vue 3 in Vite.
+Gallery vue 3 is a gallery component, which aims to aim simplify your image sliding process. You just give the image source to prop than it handles everything.
 
-## Recommended IDE Setup
+## Quick Start
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```bash
+yarn add gallery-vue3
 
-## Customize configuration
+# or use npm
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+npm install gallery-vue3
 ```
 
-### Compile and Hot-Reload for Development
+There are two options avialable to use this component
 
-```sh
-npm run dev
+## As Component
+
+```js
+import 'gallery-vue3/dist/gallery-vue3.css'
+
+import Gallery from 'gallery-vue3'
+
+export default {
+  install(app) {
+    app.component('Gallery', Gallery)
+  }
+}
 ```
 
-### Compile and Minify for Production
+### By Import
 
-```sh
-npm run build
+```js
+import 'gallery-vue3/dist/gallery-vue3.css'
+import Gallery from 'gallery-vue3'
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+You must import css files above import statements otherwise component will not correctly render
