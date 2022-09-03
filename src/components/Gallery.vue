@@ -1,70 +1,70 @@
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch } from 'vue'
 const props = defineProps({
   imgSrcList: {
     type: Array,
-    required: true,
-  },
-});
+    required: true
+  }
+})
 
-let currentPhotoIndex = ref(0);
-let isGalleryOpen = ref(false);
+let currentPhotoIndex = ref(0)
+let isGalleryOpen = ref(false)
 
 const currentPhotoSrc = computed(
   () => props.imgSrcList[currentPhotoIndex.value]
-);
+)
 
-const keyUpEventCallback = (event) => {
-  if (event.key === "ArrowRight") {
-    console.log("hey");
-    swapRight();
+const keyUpEventCallback = event => {
+  if (event.key === 'ArrowRight') {
+    console.log('hey')
+    swapRight()
   }
-  if (event.key === "ArrowLeft") {
-    swapLeft();
+  if (event.key === 'ArrowLeft') {
+    swapLeft()
   }
-  if (event.key === "Escape") {
-    closeGallery();
+  if (event.key === 'Escape') {
+    closeGallery()
   }
-};
+}
 
-watch(isGalleryOpen, (newValue) => {
+watch(isGalleryOpen, newValue => {
   if (newValue) {
-    window.addEventListener("keyup", keyUpEventCallback);
+    window.addEventListener('keyup', keyUpEventCallback)
   } else {
-    window.removeEventListener("keyup", keyUpEventCallback);
+    window.removeEventListener('keyup', keyUpEventCallback)
   }
-});
+})
 
-const openGallery = (imgIndex) => {
-  currentPhotoIndex.value = imgIndex;
-  isGalleryOpen.value = true;
-};
+const openGallery = imgIndex => {
+  currentPhotoIndex.value = imgIndex
+  isGalleryOpen.value = true
+}
 
 const closeGallery = () => {
-  isGalleryOpen.value = false;
-};
+  isGalleryOpen.value = false
+}
 
 const swapRight = () => {
-  const maxIndex = props.imgSrcList.length;
+  const maxIndex = props.imgSrcList.length
   if (maxIndex === currentPhotoIndex.value + 1) {
-    return;
+    return
   }
-  currentPhotoIndex.value = currentPhotoIndex.value + 1;
-};
+  currentPhotoIndex.value = currentPhotoIndex.value + 1
+}
 
 const swapLeft = () => {
-  const lowestIndex = 0;
+  const lowestIndex = 0
   if (lowestIndex === currentPhotoIndex.value) {
-    return;
+    return
   }
-  currentPhotoIndex.value = currentPhotoIndex.value - 1;
-};
+  currentPhotoIndex.value = currentPhotoIndex.value - 1
+}
 
-const changeCurrentPhotoIndex = (newIndex) => {
-  currentPhotoIndex.value = newIndex;
-};
+const changeCurrentPhotoIndex = newIndex => {
+  currentPhotoIndex.value = newIndex
+}
 
-defineExpose({ openGallery });
+defineExpose({ openGallery })
 </script>
 
 <template>
