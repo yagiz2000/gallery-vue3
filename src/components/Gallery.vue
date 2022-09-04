@@ -34,7 +34,7 @@ watch(isGalleryOpen, newValue => {
   }
 })
 
-const openGallery = imgIndex => {
+const openGallery = (imgIndex = 0) => {
   currentPhotoIndex.value = imgIndex
   isGalleryOpen.value = true
 }
