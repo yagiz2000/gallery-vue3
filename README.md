@@ -28,7 +28,7 @@ export default {
 }
 ```
 
-### By Import
+## By Import
 
 ```js
 import 'gallery-vue3/dist/gallery-vue3.css'
@@ -36,3 +36,15 @@ import Gallery from 'gallery-vue3'
 ```
 
 You must import css files above import statements otherwise component will not correctly render
+
+### Usage
+
+https://stackblitz.com/edit/vue-5qbkec?file=src/App.vue
+
+# Todo List
+
+- [] Adding Width and Height Prop For Image Rendering
+- [] Refactor With Typescript
+- [] Publishing React Version
+- [] Full Screen Option
+- [] Adding Image Download Functionality
