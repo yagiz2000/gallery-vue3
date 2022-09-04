@@ -43,14 +43,17 @@ You must import css files above import statements otherwise component will not c
 - On press left arrow you can swtipe to left.
 - On press esc you can close gallery.
 
+![Demo Gif](https://media.giphy.com/media/zCxOtq5MyVAS5nKTcc/giphy.gif)
+
 ### Usage
 
 https://stackblitz.com/edit/vue-5qbkec?file=src/App.vue
 
 # Todo List
 
-- [ ] Adding Width and Height Prop For Image Rendering
-- [ ] Refactor With Typescript
-- [ ] Publishing React Version
-- [ ] Full Screen Option
-- [ ] Adding Image Download Functionality
+- [ ] Adding width and height prop for image rendering
+- [ ] Refactor with Typescript
+- [ ] Publishing React version
+- [ ] Fullscreen option
+- [ ] Adding image download functionality
+- [ ] Adding github workflow for when issue created send a discord notification
