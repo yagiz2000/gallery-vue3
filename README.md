@@ -1,6 +1,8 @@
 # Gallery Vue3
 
-Gallery vue 3 is a gallery component, which aims to  simplify your content displaying. You just give the image source to prop than it handles everything.
+Gallery vue 3 is a gallery component, which aims to simplify your content displaying. You just give the image source to prop than it handles everything.
+
+![Demo Gif](https://media.giphy.com/media/zCxOtq5MyVAS5nKTcc/giphy.gif)
 
 ## Quick Start
 
@@ -42,8 +44,6 @@ You must import css files above import statements otherwise component will not c
 - On press right arrow you can swipe to right.
 - On press left arrow you can swtipe to left.
 - On press esc you can close gallery.
-
-![Demo Gif](https://media.giphy.com/media/zCxOtq5MyVAS5nKTcc/giphy.gif)
 
 ### Usage
 
