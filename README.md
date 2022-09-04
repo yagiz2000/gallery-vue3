@@ -43,8 +43,8 @@ https://stackblitz.com/edit/vue-5qbkec?file=src/App.vue
 
 # Todo List
 
-- [] Adding Width and Height Prop For Image Rendering
-- [] Refactor With Typescript
-- [] Publishing React Version
-- [] Full Screen Option
-- [] Adding Image Download Functionality
+- [ ] Adding Width and Height Prop For Image Rendering
+- [ ] Refactor With Typescript
+- [ ] Publishing React Version
+- [ ] Full Screen Option
+- [ ] Adding Image Download Functionality
