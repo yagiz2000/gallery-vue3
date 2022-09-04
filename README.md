@@ -4,7 +4,7 @@ Gallery vue 3 is a gallery component, which aims to simplify your content displa
 
 ![Demo Gif](https://media.giphy.com/media/zCxOtq5MyVAS5nKTcc/giphy.gif)
 
-## Quick Start
+## Installation
 
 ```bash
 yarn add gallery-vue3
