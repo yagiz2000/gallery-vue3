@@ -1,6 +1,6 @@
 # Gallery Vue3
 
-Gallery vue 3 is a gallery component, which aims to aim simplify your image sliding process. You just give the image source to prop than it handles everything.
+Gallery vue 3 is a gallery component, which aims to  simplify your content displaying. You just give the image source to prop than it handles everything.
 
 ## Quick Start
 
