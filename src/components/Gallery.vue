@@ -16,7 +16,6 @@ const currentPhotoSrc = computed(
 
 const keyUpEventCallback = event => {
   if (event.key === 'ArrowRight') {
-    console.log('hey')
     swapRight()
   }
   if (event.key === 'ArrowLeft') {
