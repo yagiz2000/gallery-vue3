@@ -7,7 +7,7 @@ Gallery vue 3 is a gallery component, which aims to aim simplify your image slid
 ```bash
 yarn add gallery-vue3
 
-# or use npm
+# or
 
 npm install gallery-vue3
 ```
@@ -36,6 +36,12 @@ import Gallery from 'gallery-vue3'
 ```
 
 You must import css files above import statements otherwise component will not correctly render
+
+## Keyboard Functionality
+
+- On press right arrow you can swipe to right.
+- On press left arrow you can swtipe to left.
+- On press esc you can close gallery.
 
 ### Usage
 
