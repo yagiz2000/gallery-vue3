@@ -2,7 +2,7 @@ name: Issue Opened
 
 on:
   issues:
-    types: [opened, edited, milestoned]
+    types: [opened]
 jobs:
   send-discord-notification:
     runs-on: ubuntu-latest
@@ -12,4 +12,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: 'An issue for the project {{ EVENT_PAYLOAD.repository.full_name }} has been opened.'
+          args: 'An issue named {{EVENT_PAYLOAD.issue.title}} for the project {{ EVENT_PAYLOAD.repository.full_name }} has been opened. By {{ EVENT_PAYLOAD.sender.login }}'
