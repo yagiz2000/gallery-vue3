@@ -1,6 +1,6 @@
 {
   "name": "gallery-vue3",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./dist/gallery-vue3.umd.js",
   "module": "./dist/gallery-vue3.es.js",
   "author": "Yagiz Ceritoglu <yagzceritoglu@gmail.com>",
