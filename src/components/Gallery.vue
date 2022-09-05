@@ -1,11 +1,18 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, defineEmits } from 'vue'
 const props = defineProps({
   imgSrcList: {
     type: Array,
     required: true
   }
 })
+
+const emit = defineEmits([
+  'swappedRight',
+  'swappedLeft',
+  'onClose',
+  'onGalleryOpen'
+])
 
 let currentPhotoIndex = ref(0)
 let isGalleryOpen = ref(false)
@@ -35,11 +42,13 @@ watch(isGalleryOpen, newValue => {
 })
 
 const openGallery = (imgIndex = 0) => {
+  emit('onGalleryOpen')
   currentPhotoIndex.value = imgIndex
   isGalleryOpen.value = true
 }
 
 const closeGallery = () => {
+  emit('onClose')
   isGalleryOpen.value = false
 }
 
@@ -49,6 +58,7 @@ const swapRight = () => {
     return
   }
   currentPhotoIndex.value = currentPhotoIndex.value + 1
+  emit('swappedRight')
 }
 
 const swapLeft = () => {
@@ -57,6 +67,7 @@ const swapLeft = () => {
     return
   }
   currentPhotoIndex.value = currentPhotoIndex.value - 1
+  emit('swappedLeft')
 }
 
 const changeCurrentPhotoIndex = newIndex => {
