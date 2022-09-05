@@ -47,7 +47,7 @@ You must import css files above import statements otherwise component will not c
 
 ### Usage
 
-https://stackblitz.com/edit/vue-5qbkec?file=src/App.vue
+https://stackblitz.com/edit/vue-ta6vut?file=src%2FApp.vue
 
 # Todo List
 
